@@ -138,7 +138,29 @@ Tối 02/11/2026 gia đình tôi 4 người xem 2 suất phim liên tiếp tại
 **CAU LENH**
 
 ```text
-(Viết câu lệnh vào đây – xoá dòng này)
+======================================================
+PROMPT TRẠM 2 (đã có sẵn, không cần viết)
+======================================================
+
+Dưới đây là kết quả phân loại khiếu nại {
+"loai_su_co": "loi_ky_thuat",
+"so_khach": 4,
+"so_suat_bi_loi": 2,
+"tom_tat": "Mất tiếng giữa phim hơn 15 phút ở cả 2 suất chiếu liên tiếp của gia đình 4 người.",
+"tong_den_bu_vnd": 640000,
+"can_quan_ly_duyet": true,
+"phan_hoi_khach_hang": "Rạp chiếu phim Ánh Dương thành thật xin lỗi quý khách và gia đình vì sự cố mất tiếng trong cả hai suất chiếu tối 02/11/2026 tại phòng 3 làm gián đoạn trải nghiệm xem phim của gia đình. Chúng tôi xin nhận hoàn toàn trách nhiệm về sơ suất kỹ thuật này và trân trọng đề xuất mức hoàn tiền 80.000 đồng/khách cho mỗi suất chiếu bị lỗi, tổng cộng là 640.000 đồng cho 4 khách trong 2 suất. Yêu cầu đền bù này đang được chuyển đến Quản lý rạp phê duyệt để sớm hoàn tất thủ tục gửi đến quý khách. Rất mong nhận được sự thông cảm từ gia đình."
+} và chính sách đền bù. Chỉ dùng chính sách trong thẻ <chinh_sach> để tính tổng mức đền bù. Trả về đúng một đối tượng JSON, không giải thích:
+{"loai_su_co": ..., "muc_den_bu": tổng số tiền (đồng) hoặc null, "can_duyet": true nếu muc_den_bu trên 500.000, ngược lại false}
+<ket_qua_tram_1>(JSON của Trạm 1)</ket_qua_tram_1>
+<chinh_sach>(chính sách đền bù ở trên)</chinh_sach>
+
+======================================================
+PROMPT TRẠM 3 (đã có sẵn, không cần viết)
+======================================================
+
+Bạn là nhân viên chăm sóc khách hàng của Rạp phim Ánh Dương. Dựa trên JSON trong thẻ <ket_qua_tram_2>, viết email phản hồi khách: xin lỗi, nêu đúng mức đền bù trong JSON, không tự đặt mức khác, giọng điệu chân thành, chuyên nghiệp, dưới 150 từ.
+<ket_qua_tram_2>{"loai_su_co": "loi_ky_thuat", "muc_den_bu": 640000, "can_duyet": true}</ket_qua_tram_2>
 ```
 
 ## 4.5. Prompt chấm bài theo Rubric
